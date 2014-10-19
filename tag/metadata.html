@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8">
-        <title>Nilmtk Blog - Progress</title>
+        <title>Nilmtk Blog - metadata</title>
         <link rel="stylesheet" href="../theme/css/main.css">
                 
         <!--[if IE]>
@@ -39,63 +39,11 @@
 1. The path of the directory containing the metadata files.
 2. The path of the actual hdf5 file where the data needs to be stored.</p>
 <p>Inutially, I faced quite a few weird errors. The issue was as follows:- In the building1.yaml file, some of the appliances were described using comma-separated appliance types, while some appliances had a blank appliance type. Nilmtk cannot understand comma-separated appliance types or blank appliance types (at least not as far as I know). So, in order to fix that, wherever I found a blank appliance type, I labelled it as 'unknown', which is a standard way of naming devices that nilmtk does not recognize. Wherever I found a comma-separated list of appliance types, I replaced them with a single appliance type, removing the list. For some of the appliances, I have simply assigned my own appliance types. With that done, I was able to pass those files to the function without any problems.</p>                </article>
-                            </aside><!-- /#featured -->
-                            <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-                                                
-
-                 
-                        <li><article class="hentry">    
-                <header>
-                    <h1><a href="../working-so-far.html" rel="bookmark"
-                           title="Permalink to Last Week's update">Last Week's update</a></h1>
-                </header>
-                
-                <div class="entry-content">
-                <footer class="post-info">
-        <abbr class="published" title="2014-10-16T00:00:00">
-                Thu 16 October 2014
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/rishi-baijal.html">Rishi Baijal</a>
-        </address>
-        <p>In <a href="../category/technical.html">Technical</a>. </p>
-<p>tags: <a href="../tag/progress.html">Progress</a></p>
-</footer><!-- /.post-info -->                <p>AMPDs data set converter</p>
-                <a class="readmore" href="../working-so-far.html">read more</a>
-                                </div><!-- /.entry-content -->
-            </article></li>
-                            
-
-                 
-                        <li><article class="hentry">    
-                <header>
-                    <h1><a href="../progress-so-far.html" rel="bookmark"
-                           title="Permalink to Progress so far.">Progress so far.</a></h1>
-                </header>
-                
-                <div class="entry-content">
-                <footer class="post-info">
-        <abbr class="published" title="2014-10-03T00:00:00">
-                Fri 03 October 2014
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/rishi-baijal.html">Rishi Baijal</a>
-        </address>
-        <p>In <a href="../category/technical.html">Technical</a>. </p>
-<p>tags: <a href="../tag/progress.html">Progress</a></p>
-</footer><!-- /.post-info -->                <p>Notebooks and Textbooks.</p>
-                <a class="readmore" href="../progress-so-far.html">read more</a>
-                                </div><!-- /.entry-content -->
-            </article></li>
-                            </ol><!-- /#posts-list -->
-                            <p class="paginator">
+                                    <p class="paginator">
         Page 1 / 1
     </p>
+                            </aside><!-- /#featured -->
+                                                </ol><!-- /#posts-list -->
                         </section><!-- /#content -->
                     <section id="extras" class="body">
                                 <div class="social">

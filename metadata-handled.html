@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>Metadata - done</title>
+        <link rel="stylesheet" href="./theme/css/main.css">
+                
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">Nilmtk Blog </a></h1>
+                <nav><ul>
+                                                    <li><a href="./pages/about.html">About</a></li>
+                                                                    <li class="active"><a href="./category/technical.html">Technical</a></li>
+                                                </ul></nav>
+        </header><!-- /#banner -->
+        <section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./metadata-handled.html" rel="bookmark"
+           title="Permalink to Metadata - done">Metadata - done</a></h1>
+          </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+        <abbr class="published" title="2014-10-19T00:00:00">
+                Sun 19 October 2014
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/rishi-baijal.html">Rishi Baijal</a>
+        </address>
+        <p>In <a href="./category/technical.html">Technical</a>. </p>
+<p>tags: <a href="./tag/progress.html">Progress</a><a href="./tag/converter.html">converter</a><a href="./tag/metadata.html">metadata</a></p>
+</footer><!-- /.post-info -->      <p>As of writing this, the metadata for the AMPds data set is still incomplete. However, in order to test my converter, I replaced some of the appliance types in the building1.yaml file with random types (in most cases, I have used the type unknown). Obviously, those values are inaccurate and once the complete metadata for the dataset has been released, I will update my forked repository to reflect the changes in the metadata.</p>
+<p>Regardless of that, the converter successfully manages to convert the yaml files to the hdf5 format. I have used the convert_yaml_to_hdf5() function in order to accomplish this, and the parameters that this finction accepts are:
+1. The path of the directory containing the metadata files.
+2. The path of the actual hdf5 file where the data needs to be stored.</p>
+<p>Inutially, I faced quite a few weird errors. The issue was as follows:- In the building1.yaml file, some of the appliances were described using comma-separated appliance types, while some appliances had a blank appliance type. Nilmtk cannot understand comma-separated appliance types or blank appliance types (at least not as far as I know). So, in order to fix that, wherever I found a blank appliance type, I labelled it as 'unknown', which is a standard way of naming devices that nilmtk does not recognize. Wherever I found a comma-separated list of appliance types, I replaced them with a single appliance type, removing the list. For some of the appliances, I have simply assigned my own appliance types. With that done, I was able to pass those files to the function without any problems.</p>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</section>
+        <section id="extras" class="body">
+                                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/None" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            
+                                                    <li><a href="https://www.facebook.com/rishi.baijal?fref=ts">Facebook</a></li>
+                                                    <li><a href="https://github.com/RishiBaijal">Github</a></li>
+                                                </ul>
+                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

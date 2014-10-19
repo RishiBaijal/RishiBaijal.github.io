@@ -23,8 +23,38 @@
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../working-so-far.html">Last Week's update</a></h1> 
+                    <h1 class="entry-title"><a href="../metadata-handled.html">Metadata - done</a></h1> 
                     <footer class="post-info">
+        <abbr class="published" title="2014-10-19T00:00:00">
+                Sun 19 October 2014
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/rishi-baijal.html">Rishi Baijal</a>
+        </address>
+        <p>In <a href="../category/technical.html">Technical</a>. </p>
+<p>tags: <a href="../tag/progress.html">Progress</a><a href="../tag/converter.html">converter</a><a href="../tag/metadata.html">metadata</a></p>
+</footer><!-- /.post-info --><p>As of writing this, the metadata for the AMPds data set is still incomplete. However, in order to test my converter, I replaced some of the appliance types in the building1.yaml file with random types (in most cases, I have used the type unknown). Obviously, those values are inaccurate and once the complete metadata for the dataset has been released, I will update my forked repository to reflect the changes in the metadata.</p>
+<p>Regardless of that, the converter successfully manages to convert the yaml files to the hdf5 format. I have used the convert_yaml_to_hdf5() function in order to accomplish this, and the parameters that this finction accepts are:
+1. The path of the directory containing the metadata files.
+2. The path of the actual hdf5 file where the data needs to be stored.</p>
+<p>Inutially, I faced quite a few weird errors. The issue was as follows:- In the building1.yaml file, some of the appliances were described using comma-separated appliance types, while some appliances had a blank appliance type. Nilmtk cannot understand comma-separated appliance types or blank appliance types (at least not as far as I know). So, in order to fix that, wherever I found a blank appliance type, I labelled it as 'unknown', which is a standard way of naming devices that nilmtk does not recognize. Wherever I found a comma-separated list of appliance types, I replaced them with a single appliance type, removing the list. For some of the appliances, I have simply assigned my own appliance types. With that done, I was able to pass those files to the function without any problems.</p>                </article>
+                            </aside><!-- /#featured -->
+                            <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+                                                
+
+                 
+                        <li><article class="hentry">    
+                <header>
+                    <h1><a href="../working-so-far.html" rel="bookmark"
+                           title="Permalink to Last Week's update">Last Week's update</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
         <abbr class="published" title="2014-10-16T00:00:00">
                 Thu 16 October 2014
         </abbr>
@@ -34,18 +64,11 @@
         </address>
         <p>In <a href="../category/technical.html">Technical</a>. </p>
 <p>tags: <a href="../tag/progress.html">Progress</a></p>
-</footer><!-- /.post-info --><p>So this week's assignment involved writing an hdf5 converter for the AMPDs dataset. Specifically, I was supposed to read all the .csv files in the dataset, store the data as a dataframe and load that dataframe into an hdf5 file. It is done for the most part. Basically, what I had to do was define a function that took as input the path to the actual dataset, the path to the metadata of the set, a key generation scheme and the path to a single h5 file which would finally contain all the accumulated information from the entire dataset.</p>
-<h2>Initial failure using h5py</h2>
-<p>When I was given this assignment, I immediately googled for ways to convert csv files to h5 files, since the AMPds dataset consists entirely of csv files. I successfully installed h5py and wrote some hacky code which read all the files contained in that directory and used the h5 library to push all that data into the same file. Everything seemed to work once I put my laptop away. However, a few days later, when I tried to run the code, it would not run. Strange, seeing how it should have worked given how it was working a few days ago. Immediately my spirits dropped.</p>
-<p>It turns out that the h5py module was unable to detect a file which should have been in the library itself. I tried to fix this manually, but to no avail. I upgraded it the library to the latest version, but I still got the same error. After wasting about two or three days on h5py, I decided to give up and try something else instead.</p>
-<h2>Using HDFStore</h2>
-<p>An excellent library is already available if you want to work with hdf files (and here I was wasting time on h5py). After re-writing the entire code using HDFStore, I finally got it to work, at least for some time. As of now, the code seems to be working perfectly. It manages to retrieve the csv data from the files and successfully stores that data in an h5 file specified by the user. This should have been done quite a while back, but better late than never. I have not handled the metadata yet and according to my mentor, that is going to be harder to deal with than the csv files themselves. However, the author of this dataset has recently released some files himself. I hope that will save me some time. Unfortunately, that set is still incomplete. Let's see how it goes.</p>                </article>
-                            </aside><!-- /#featured -->
-                            <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-                                                
+</footer><!-- /.post-info -->                <p>AMPDs data set converter</p>
+                <a class="readmore" href="../working-so-far.html">read more</a>
+                                </div><!-- /.entry-content -->
+            </article></li>
+                            
 
                  
                         <li><article class="hentry">    
