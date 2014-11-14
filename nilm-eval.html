@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>The nilm-eval project</title>
+        <link rel="stylesheet" href="./theme/css/main.css">
+                
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="./">Nilmtk Blog </a></h1>
+                <nav><ul>
+                                                    <li><a href="./pages/about.html">About</a></li>
+                                                                    <li class="active"><a href="./category/technical.html">Technical</a></li>
+                                                </ul></nav>
+        </header><!-- /#banner -->
+        <section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="./nilm-eval.html" rel="bookmark"
+           title="Permalink to The nilm-eval project">The nilm-eval project</a></h1>
+          </header>
+
+    <div class="entry-content">
+      <footer class="post-info">
+        <abbr class="published" title="2014-11-13T00:00:00">
+                Thu 13 November 2014
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="./author/rishi-baijal.html">Rishi Baijal</a>
+        </address>
+        <p>In <a href="./category/technical.html">Technical</a>. </p>
+<p>tags: <a href="./tag/nilm-eval.html">nilm-eval</a><a href="./tag/nilmtk.html">nilmtk</a><a href="./tag/comparison.html">comparison</a></p>
+</footer><!-- /.post-info -->      <p>This is the first in a series of posts that I am going to write about the nilm-eval project, which is one of the more recent attempts at building a Non-Intrusive Load Monitoring System. Nilm-eval has been written in Matlab with the primary aim of making it easy to evaluate the performance of Non Intrusive Load Monitoring algorithms. </p>
+<h1>The Backstory</h1>
+<p>The energy needs of the world are increasing at an exponential rate as a result of an increase in population and the growing demands of that population. This could have adverse repurcussions on the environment in general. In order to regulate our energy usage, we need to first monitor the usage of individual appliances and correlate that with the overall energy consumption. One of the ways to do this would be to monitor the energy output of every single electrical appliance that we use, and that is not possible for a number of reasons. The solution to this is the advent of Non-Intrusive Load Monitoring algorithms. These algorithms analyse the aggregate energy consumption of a house and through that data, they can figure out which appliances are running and what is the electricity consumption of those appliances.</p>
+<h1>The problem</h1>
+<p>The problem arises when you need to analyse the performance and behaviour of the algorithms that you are using in your NILM system. Analysis of NILM algorithms involves:</p>
+<ol>
+<li>Different underlying assumptions</li>
+<li>Tailored parameter settings</li>
+<li>Lack of comprehensive data sets.</li>
+</ol>
+<p>As a result of this, evaluation of NILM algorithms is cumbersome. NILM-Eval is a framework designed to alleviate such problems.</p>
+<h1>NILM-Eval - The Basic Approach</h1>
+<p>The NILM-Eval framework uses the ECO dataset to assess the performance of NILM algorithms, because that is the most comprehensive dataset available. They have evaluated the performance of supervised, unsupervised and semi-supervised algorithms. The algorithms that have been used are:</p>
+<ol>
+<li>Parson's algorithm</li>
+<li>Baranski's algorithm</li>
+<li>Weiss' algorithm</li>
+<li>Kolter's algorithm</li>
+</ol>
+<p>I will now describe some of the basic characteristics of each of these algorithms:</p>
+<h2>Parson's algorithm</h2>
+<ol>
+<li>It relies on Hidden Markov Models (HMMs) and the Viterbi algorithm inorder to disaggregate the electricity consumption of a household.</li>
+<li>It determines the most likely sequences of states </li>
+<li>It uses a semi-supervised learning process in order to determine the transition probabilities and the power demand of each appliance. </li>
+</ol>
+<h2>Baranski's algorithm</h2>
+<ol>
+<li>It finds patterns in the electric usage of a house and attributes those patterns to individual appliances.</li>
+<li>It is unsupervised, and therefore it has the advantage of being able to operate without knowing what appliances are there in the household.</li>
+</ol>
+<h2>Weiss' algorithm</h2>
+<ol>
+<li>Weiss' algortihm depends on switching events from the household electricity consumption and attributes that to the best match in a signature database.</li>
+<li>Weiss' algorithm has been treated as a supervised learning approach.</li>
+</ol>
+<h2>Kolter's algorithm</h2>
+<ol>
+<li>This is similar to Parson's algorithm in that it uses Hidden Markov Models in order to disaggregate the electricity consumption of the household.</li>
+<li>It analyses the ON cycle of the appliance, and then it tries to recognize the appliance by analysing its on cycle. (It models this data as an HMM)</li>
+</ol>
+    </div><!-- /.entry-content -->
+    
+  </article>
+</section>
+        <section id="extras" class="body">
+                                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/None" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            
+                                                    <li><a href="https://www.facebook.com/rishi.baijal?fref=ts">Facebook</a></li>
+                                                    <li><a href="https://github.com/RishiBaijal">Github</a></li>
+                                                </ul>
+                </div><!-- /.social -->
+                </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
