@@ -23,8 +23,37 @@
 
                             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../nilm-eval, evaluation.html">NILM-Eval evaluation methodology</a></h1> 
+                    <h1 class="entry-title"><a href="../new-update, BTP.html">NIOMTK</a></h1> 
                     <footer class="post-info">
+        <abbr class="published" title="2015-02-16T00:00:00">
+                Mon 16 February 2015
+        </abbr>
+
+                <address class="vcard author">
+                By <a class="url fn" href="../author/rishi-baijal.html">Rishi Baijal</a>
+        </address>
+        <p>In <a href="../category/technical.html">Technical</a>. </p>
+<p>tags: <a href="../tag/late.html">Late</a><a href="../tag/update.html">update</a></p>
+</footer><!-- /.post-info --><p>I applied for a BTP in order to continue working on this project. As it turns out, we will be heading in a new direction - NIOMTK. </p>
+<h2>NIOMTK</h2>
+<p>As a part of NIOMTK, I will be buiding a toolkit that is used to detect occupancy of a particular home in a Non-Intrusive fashion - hence the naeme Non-Intrusive occupancy monitoring. There are multiple research papers that I am currently reading. One of them was presented at BuildSys 2013, authored by Dong Chen, Sean Barker, Adarsh Subbaswamy, David Irwin and Prashant Shenoy. I presented this paper at a group meeting over a google hangout. There are other interesting research papers on this topic. I will write about them as I present them over the course of the semester. </p>
+<p>I plan to get started with the implementation of the system soon. We will be looking at two to three datasets and two to three algorithms, one of them being the thresholding approach. More updates will come as the semester goes on.</p>                </article>
+                            </aside><!-- /#featured -->
+                            <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+                                                
+
+                 
+                        <li><article class="hentry">    
+                <header>
+                    <h1><a href="../nilm-eval, evaluation.html" rel="bookmark"
+                           title="Permalink to NILM-Eval evaluation methodology">NILM-Eval evaluation methodology</a></h1>
+                </header>
+                
+                <div class="entry-content">
+                <footer class="post-info">
         <abbr class="published" title="2014-11-15T00:00:00">
                 Sat 15 November 2014
         </abbr>
@@ -34,36 +63,11 @@
         </address>
         <p>In <a href="../category/technical.html">Technical</a>. </p>
 <p>tags: <a href="../tag/nilm-eval.html">nilm-eval</a><a href="../tag/nilmtk.html">nilmtk</a><a href="../tag/comparison.html">comparison</a><a href="../tag/evaluation.html">evaluation</a></p>
-</footer><!-- /.post-info --><p>We saw the difficulties presented in the previous post. I will now go over some of the features offered by NILM-Eval that help in alleviating difficulties like the ones mentioned.In order to achieve this end, NILM-Eval offers the foillowing features:</p>
-<ol>
-<li>It enables the evaluation of NILM algorithms on different datasets, households, granularities, time periods and specific algorithm parameters.</li>
-<li>It allows the user to repeat the experiments performed by others with little effort, evaluate algorithms on a new data-set and fine tune the parameters in order to optimize the performance of an algorithm in a particular setting.</li>
-</ol>
-<h2>Metrics Evaluated</h2>
-<p>NILM-Eval evalulates the following metrics in order to evaluate the performance of an algorithm:</p>
-<ol>
-<li>Root mean square error</li>
-<li>Precision</li>
-<li>Recall</li>
-<li>F1 score.</li>
-</ol>
-<h2>Dataset used</h2>
-<p>As I have stated earlier, the ECO dataset has been used in testing the NILM-Eval framework for the following reasons:</p>
-<ol>
-<li>It contains data collected over 8 months. Only the AMPds and the UK-Dale dataset cover a comparably long time-span.</li>
-<li>The aggregate electricity consumption available with the ECO dataset is very detailed because it contains measurements of real and reactive power.</li>
-<li>The data can be colected at a freqwuency of 1 Hz.</li>
-<li>ECO is the only dataset that contains occupancy information about the households.</li>
-</ol>
-<h2>Comparison between NILMTK and NILM-Eval</h2>
-<p>The similarity between these two frameworks is the fact that they both are used to monitor the electricity consumption of a particular household in a way that does not feel meddlesome. While the focus of NILMTK seems to be on compatibility and ease of usage (there is even an issue open on github that says that NILMTK installation is difficult for the average user and it), NILM-Eval focuses more on the algorithms that are to be used in order to accomplish this task. The birth of NILM-Eval was due to the lack of a framework that was good enough to provide a yardstick to measure the performance of algorithms that are concerned with non-intrusive load monitoring. As opposed to this, NILMTK is a framework that provides rich metadata support and has converters for the various datasets that are out there. On the other hand, NILM-Eval has mostly been tested on the ECO dataset. </p>
-<p>Both frameworks could possibly learn from each other. NLMTK could take inspiration from NILM-Eval and use a more algorithmic approach (although doing that in python would be dangerously tedious), while NILM-Eval could increase its metadata support in order to support a greater amount of compatibility.</p>                </article>
-                            </aside><!-- /#featured -->
-                            <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-                                                
+</footer><!-- /.post-info -->                <p>The nilm-eval project evaluation methodology</p>
+                <a class="readmore" href="../nilm-eval, evaluation.html">read more</a>
+                                </div><!-- /.entry-content -->
+            </article></li>
+                            
 
                  
                         <li><article class="hentry">    
@@ -109,30 +113,6 @@
 <p>tags: <a href="../tag/late.html">Late</a><a href="../tag/update.html">update</a></p>
 </footer><!-- /.post-info -->                <p>Late update</p>
                 <a class="readmore" href="../late-update.html">read more</a>
-                                </div><!-- /.entry-content -->
-            </article></li>
-                            
-
-                 
-                        <li><article class="hentry">    
-                <header>
-                    <h1><a href="../new-update, BTP.html" rel="bookmark"
-                           title="Permalink to NIOMTK">NIOMTK</a></h1>
-                </header>
-                
-                <div class="entry-content">
-                <footer class="post-info">
-        <abbr class="published" title="2014-11-06T00:00:00">
-                Thu 06 November 2014
-        </abbr>
-
-                <address class="vcard author">
-                By <a class="url fn" href="../author/rishi-baijal.html">Rishi Baijal</a>
-        </address>
-        <p>In <a href="../category/technical.html">Technical</a>. </p>
-<p>tags: <a href="../tag/late.html">Late</a><a href="../tag/update.html">update</a></p>
-</footer><!-- /.post-info -->                <p>A new direction</p>
-                <a class="readmore" href="../new-update, BTP.html">read more</a>
                                 </div><!-- /.entry-content -->
             </article></li>
                             
